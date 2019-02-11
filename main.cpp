@@ -1,5 +1,5 @@
-#define USE_OPENCV 1  
-#define CPU_ONLY 1
+//#define USE_OPENCV 1  
+//#define CPU_ONLY 1 设置使用　cpu
 #include <caffe/caffe.hpp>
 #include <string>
 #include <opencv2/opencv.hpp>
@@ -41,7 +41,11 @@ int main(int argc, char** argv)
 
     Mat img = imread(img_file);
 
-    Caffe::set_mode(Caffe::CPU); // 是否使用GPU
+    #ifdef CPU_ONLY
+    Caffe::set_mode(Caffe::CPU);
+    #else
+    Caffe::set_mode(Caffe::GPU);//使用了gpu
+    #endif
 
     // 定义变量
     shared_ptr<Net<float> > net_;// 保存模型
@@ -136,6 +140,7 @@ int main(int argc, char** argv)
     /* This operation will write the separate BGR planes directly to the
      * input layer of the network because it is wrapped by the cv::Mat
      * objects in input_channels. */
+    double time1 = static_cast<double>( cv::getTickCount());
     cv::split(sample_normalized, input_channels);
     // 调用模型进行预测
     net_->Forward();
@@ -159,6 +164,7 @@ int main(int argc, char** argv)
       std::cout << std::fixed << std::setprecision(4) << p.second << " - \""
                 << p.first << "\"" << std::endl;
     }
-
+    double timeuse = (static_cast<double>( cv::getTickCount()) - time1)/cv::getTickFrequency();
+    std::cout<<"time use:"<<timeuse<<std::endl;
     return 0;
 }// end for main

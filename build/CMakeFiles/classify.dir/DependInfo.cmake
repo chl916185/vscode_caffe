@@ -16,7 +16,6 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/local/cuda/include"
   "/usr/local/include/opencv"
   "/home/chl/anaconda2/include"
-  "../include"
   )
 
 # Targets to which this target links.
