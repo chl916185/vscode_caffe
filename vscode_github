@@ -1,0 +1,6 @@
+1.先在github账户下创建一个新的repository,命名为vscode_caffe(切记勾选readme);
+2.git clone https://github.com/chl*****/vscode_caffe;
+3.打开vscode_caffe文件夹可在里面进行代码及cmake的写入;
+4.完成所有的代码后, ctr+shift+p,CMake:configure进行自动创建build,再ctr+shift+p,CMake:Build则编译完成;
+5.cd build ./classify即可运行.
+注:注意.vscode中的json文件适当进行修改
