@@ -1,0 +1,3 @@
+/home/chl/workspaces/torch_cc/vs_code_learn/2/vscode_caffe/build/CMakeFiles/edit_cache.dir
+/home/chl/workspaces/torch_cc/vs_code_learn/2/vscode_caffe/build/CMakeFiles/rebuild_cache.dir
+/home/chl/workspaces/torch_cc/vs_code_learn/2/vscode_caffe/build/CMakeFiles/classify.dir

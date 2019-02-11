@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/chl/workspaces/torch_cc/vs_code_learn/2/vscode_caffe/build",
+  "command": "/usr/bin/g++-5    -I/home/chl/workspaces/caffe/include -isystem /usr/local/include -I/home/chl/workspaces/caffe/build/src -I/usr/local/cuda/include -isystem /usr/local/include/opencv -I/home/chl/anaconda2/include -I/home/chl/workspaces/torch_cc/vs_code_learn/2/vscode_caffe/include  -g   -o CMakeFiles/classify.dir/main.cpp.o -c /home/chl/workspaces/torch_cc/vs_code_learn/2/vscode_caffe/main.cpp",
+  "file": "/home/chl/workspaces/torch_cc/vs_code_learn/2/vscode_caffe/main.cpp"
+}
+]
